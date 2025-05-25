@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace CocQuery.ViewModels
 {
-    public class PlayerRankViewModel : INotifyPropertyChanged
+    public class PlayerRankViewModel : ViewModelBase
     {
         public PlayerRankViewModel()
         {
@@ -169,14 +169,6 @@ namespace CocQuery.ViewModels
         }
         #endregion
         public ICommand SearchCommand { get; private set; }
-
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
 
 
         private bool _isRefreshing;

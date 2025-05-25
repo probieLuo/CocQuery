@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace CocQuery.ViewModels
 {
-    internal class SettingsViewModel : INotifyPropertyChanged
+    internal class SettingsViewModel : ViewModelBase
     {
 
         public SettingsViewModel()
@@ -73,12 +73,5 @@ namespace CocQuery.ViewModels
                 }
             }
         });
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
     }
 }

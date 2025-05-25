@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace CocQuery.ViewModels
 {
-    public class ClanDetailViewModel: INotifyPropertyChanged
+    public class ClanDetailViewModel: ViewModelBase
     {
         public ClanDetailViewModel(Clan clan)
         {
@@ -26,16 +26,6 @@ namespace CocQuery.ViewModels
                 }
             }
         }
-
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-        #endregion
         internal async Task OnItemClicked(ClanMember clanMember)
         {
             try

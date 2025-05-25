@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace CocQuery.ViewModels
 {
-    internal class PlayerSearchViewModel : INotifyPropertyChanged
+    internal class PlayerSearchViewModel : ViewModelBase
     {
         public PlayerSearchViewModel()
         {
@@ -123,12 +123,5 @@ namespace CocQuery.ViewModels
 
         public ICommand SearchCommand { get; private set; }
 
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
     }
 }

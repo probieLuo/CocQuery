@@ -9,7 +9,9 @@
     </ContentPage.BindingContext>
     <StackLayout>
         <CollectionView ItemsSource="{Binding FormationImages}"
-                        ItemsLayout="VerticalGrid, 3">
+                        ItemsLayout="VerticalGrid, 3"
+                        SelectionMode="Single"
+                        SelectionChanged="CollectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10">

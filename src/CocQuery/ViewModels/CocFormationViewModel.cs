@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CocQuery.ViewModels
 {
-    internal class CocFormationViewModel : INotifyPropertyChanged
+    internal class CocFormationViewModel : ViewModelBase
     {
         public CocFormationViewModel()
         {
@@ -33,15 +33,7 @@ namespace CocQuery.ViewModels
                 new FormationImage(){ImageUrl="town_hall17_5a.webp",Name="十七级大本营"},
             };
         }
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-        #endregion
+        
         private ObservableCollection<FormationImage> _formationImages;
         public ObservableCollection<FormationImage> FormationImages
         {
@@ -52,7 +44,29 @@ namespace CocQuery.ViewModels
                 OnPropertyChanged(nameof(FormationImages));
             }
         }
+        public async Task OnItemClicked()
+        {
+            try
+            {
+                //ActivityIndicatorIsRunning = true;
+                //ActivityIndicatorIsVisible = true;
 
+                // 跳转到详细页面
+                await Application.Current.MainPage.Navigation.PushAsync(new Views.CocFormationListPage());
+            }
+            catch (Exception e)
+            {
+#if DEBUG
+                throw e;
+#endif
+            }
+            finally
+            {
+               // ActivityIndicatorIsRunning = false;
+               // ActivityIndicatorIsVisible = false;
+
+            }
+        }
     }
 
     internal class FormationImage

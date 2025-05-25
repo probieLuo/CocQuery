@@ -5,7 +5,6 @@
              xmlns:cocModels="clr-namespace:CocQuery.Models.Coc"
              xmlns:viewModels="clr-namespace:CocQuery.ViewModels"
              xmlns:converters="clr-namespace:CocQuery.Common.Converters"
-             Opacity="0.9"
              Title="PlayerSearchPage">
     <ContentPage.BindingContext>
         <viewModels:PlayerSearchViewModel />

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CocQuery.Views.CocFormationListPage"
+             xmlns:viewModels="clr-namespace:CocQuery.ViewModels"
+             Title="CocFormationListPage">
+    <ContentPage.BindingContext>
+        <viewModels:CocFormationListViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ActivityIndicator x:Name="activityIndicator"
+                           IsRunning="{Binding ActivityIndicatorIsRunning}"
+                           IsVisible="{Binding ActivityIndicatorIsVisible,FallbackValue=False}"
+                           Color="Gray"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+        <Grid Grid.Row="1">
+            
+        </Grid>
+        <RefreshView Grid.Row="2"
+                     IsRefreshing="{Binding IsRefreshing}"
+                     Command="{Binding RefreshCommand}">
+            <CollectionView ItemsSource="{Binding Formations}"
+                            SelectionMode="Single"
+                            ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Padding="10">
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="150"
+                                   WidthRequest="150" />
+                            <Label Text="{Binding PublishDate}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                            <Label Text="{Binding Publisher}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

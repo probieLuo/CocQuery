@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace CocQuery.ViewModels
 {
-    internal class ClanSearchViewModel : INotifyPropertyChanged
+    internal class ClanSearchViewModel : ViewModelBase
     {
         public ClanSearchViewModel()
         {
@@ -270,13 +270,7 @@ namespace CocQuery.ViewModels
         //    }
         //}
         //public ICommand ItemTappedCommand { get; private set; }
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
+        
     }
     public class Location
     {

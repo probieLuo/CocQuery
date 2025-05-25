@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CocQuery.ViewModels
 {
-    public class PlayerDetailViewModel : INotifyPropertyChanged
+    public class PlayerDetailViewModel : ViewModelBase
     {
         public PlayerDetailViewModel(Player player)
         {
@@ -32,18 +32,6 @@ namespace CocQuery.ViewModels
             }
         }
         
-
-
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-        #endregion
-
         internal async Task OnItemClicked(PlayerClan? clan)
         {
             try

@@ -210,6 +210,9 @@
 	  <MauiXaml Update="Views\ClanSearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CocFormationListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CocFormationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

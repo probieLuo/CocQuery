@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace CocQuery.ViewModels
 {
-    public class ClanRankViewModel : INotifyPropertyChanged
+    public class ClanRankViewModel : ViewModelBase
     {
         public ClanRankViewModel()
         {
@@ -189,12 +189,6 @@ namespace CocQuery.ViewModels
 
         public ICommand RefreshCommand { get; private set; }
 
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
+       
     }
 }
