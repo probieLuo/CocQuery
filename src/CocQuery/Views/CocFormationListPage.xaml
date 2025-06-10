@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CocQuery.Views.CocFormationListPage"
              xmlns:viewModels="clr-namespace:CocQuery.ViewModels"
-             Title="CocFormationListPage">
+             Title="阵型列表">
     <ContentPage.BindingContext>
         <viewModels:CocFormationListViewModel />
     </ContentPage.BindingContext>

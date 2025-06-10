@@ -44,7 +44,7 @@ namespace CocQuery.ViewModels
                 OnPropertyChanged(nameof(FormationImages));
             }
         }
-        public async Task OnItemClicked()
+        public async Task OnItemClicked(CocFormationViewModel viewModel)
         {
             try
             {

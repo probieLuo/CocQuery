@@ -13,7 +13,7 @@ public partial class CocFormationPage : ContentPage
     {
         if (/*e.CurrentSelection.FirstOrDefault() is Models.Coc.ClanRanking clanRanking &&*/ BindingContext is CocFormationViewModel viewModel)
         {
-            await viewModel.OnItemClicked();
+            await viewModel.OnItemClicked(viewModel);
         }
     }
 }
