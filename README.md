@@ -1,11 +1,10 @@
 <p align="center">
-  <h2 align="center">MAUIDemo</h2>
+  <h2 align="center">CocQuery</h2>
 </p>
 
 ## About
 这是一个 `.NET MAUI` 的示例项目。
 - cocquery:游戏查询工具。
-- note:笔记app。
 
 ## CocQuery 
 部落冲突查询工具。    
@@ -16,8 +15,4 @@
 
 ![](https://github.com/probieLuo/MAUIDemo/blob/main/resources/f002fcbfdcd321720edce5c169d2a3da.gif)  
 
-## Notes
-笔记app。  
-
-学习地址[创建MAUI应用](https://learn.microsoft.com/zh-cn/dotnet/maui/tutorials/notes-app?view=net-maui-9.0)  
 
