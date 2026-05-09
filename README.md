@@ -3,7 +3,7 @@
 </p>
 
 ## About
-- cocquery是一款部落冲突数据查询工具。  
+- cocquery是一款基于maui的部落冲突数据查询工具。  
 
 ![](https://github.com/probieLuo/MAUIDemo/blob/main/resources/0845eb72cf5d58d20cae52c41beb1834.gif)  
 
